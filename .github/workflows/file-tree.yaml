@@ -5,13 +5,9 @@ on:
 
 jobs:
   file-tree:
-    runs-on: self-hosted
+    runs-on: self-hosted  # Windows 러너로 설정되어 있다고 가정
 
     steps:
-      - name: Install tree (Windows)
-        run: choco install tree
-        shell: powershell
-
-      - name: Execute tree
+      - name: Generate file tree
         run: tree /f > filetreelist.txt
         shell: cmd
