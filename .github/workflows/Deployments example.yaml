@@ -54,5 +54,5 @@ jobs:
             token: ${{secrets.DEV_TOKEN}}
             prerelease: true
             draft: true
-            name: dev
+            name: archive
             files: build/libs/*.jar
