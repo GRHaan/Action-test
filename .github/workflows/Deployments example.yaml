@@ -16,12 +16,13 @@ jobs:
                 java-version: '11'
                 distribution: 'temurin'
 
-            - uses: gradle/gradle-build-action@v2
+            - name: Grant execute permission to gradlew
+              run: chmod +x ./gradlew
+
+            - name: Build with Gradle (build + test)
+              uses: gradle/gradle-build-action@v2
               with:
-                arguments: build
-            - uses: gradle/gradle-build-action@v2
-              with:
-                arguments: test
+                arguments: build test
 
             - name: Upload Artifact
               uses: actions/upload-artifact@v4
