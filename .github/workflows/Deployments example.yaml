@@ -36,7 +36,7 @@ jobs:
       if: github.ref == 'refs/heads/dev'
 
       runs-on: ubuntu-latest
-      enviroment:
+      environment:
         name: dev
         url: https://github.com/${{github.repository}}/releases/tag/v${{vars.DEV_VERSION}}
 
